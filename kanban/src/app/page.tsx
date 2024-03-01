@@ -3,5 +3,5 @@ export default function Home() {
     <>
       <h1 className="border">hello world</h1>
     </>
-  );
+  )
 }

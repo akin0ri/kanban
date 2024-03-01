@@ -22,8 +22,9 @@
         "codezombiech.gitignore",
         "GitHub.copilot",
         "GitHub.copilot-chat",
-        "mechatroner.rainbow-csv",
-        "mosapride.zenkaku"
+        "oderwat.indent-rainbow",
+        "mosapride.zenkaku",
+        "seatonjiang.gitmoji-vscode"
       ]
     }
   }

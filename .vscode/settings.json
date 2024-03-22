@@ -105,7 +105,7 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "diffEditor.maxComputationTime": 0,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "source.fixAll.eslint": "explicit"
   },
   "[javascript]": {
     "editor.formatOnSave": true

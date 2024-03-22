@@ -1,13 +1,13 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 export default function App({
-  children,
+  children
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
     <html>
       <body>{children}</body>
     </html>
-  );
+  )
 }

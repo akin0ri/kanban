@@ -4,19 +4,27 @@ import Itembox from './itembox'
 import ItemTable from './itemtable'
 
 export default function TaskArea() {
-  const [isDropped, setIsDropped] = useState(false)
-  const draggableMarkup = <Itembox>Task001</Itembox>
+  const containers = ['A', 'B', 'C', 'D'];
+  const [parent, setParent] = useState(null);
+  const draggableMarkup = (
+    <Itembox id="draggable">task 1</Itembox>
+  );
 
   return (
     <DndContext onDragEnd={handleDragEnd}>
-      <div className="p-5 border">{!isDropped ? draggableMarkup : null}</div>
-      <ItemTable>{isDropped ? draggableMarkup : 'Drop here'}</ItemTable>
-    </DndContext>
-  )
+      {parent === null ? draggableMarkup : null}
 
-  function handleDragEnd(event) {
-    if (event.over && event.over.id === 'droppable') {
-      setIsDropped(true)
-    }
+      {containers.map((id) => (
+        <ItemTable key={id} id={id}>
+          {parent === id ? draggableMarkup : 'タスク置き場'}
+        </ItemTable>
+      ))}
+    </DndContext>
+  );
+
+  function handleDragEnd(event:any) {
+    const {over} = event;
+
+    setParent(over ? over.id : null);
   }
 }
